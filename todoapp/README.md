@@ -108,3 +108,20 @@ e.g.: visit home/ -> nuxt load / home page and render its content inside <slot/>
 ## What is CSR and SSR
 SSR : Server send ready-to-view pages with layouts, menu. Good for SEO, fast at page first load
 CSR: Server send HTML shell and JS to browser, then browser start cooking that then display for users. Good for interactives feel like apps. 
+
+## Purposes of layouts and pages
+1. Layouts
+- Purpose: Provide consistent structure and shared UI for multiple pages
+- Normally use for: 
+    a. Nav bars like top, side, of both
+    b. Headers
+    c. Global modules or notifications
+    d. Theme/bg wrapper
+    e. Shared sidebars
+    f. Auth guards or loading overlay
+
+2. Pages
+- Purpose: Display unique content for a specific route
+- Normally use for: 
+    a. page specific conent. E.g.: forms, lists, dashboard...
+    b. page logic

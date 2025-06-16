@@ -11,7 +11,7 @@
                 <NuxtLink to="/">Home</NuxtLink>
             </el-menu-item>
             <el-menu-item index="2">
-                <NuxtLink to="user-settings">Settings</NuxtLink>
+                <NuxtLink to="/user">User</NuxtLink>
             </el-menu-item>
             <el-menu-item index="3">
                 <NuxtLink to="/about">About</NuxtLink>
@@ -22,10 +22,10 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
+const route = useRoute();
 
 const activeIndex = ref('1');
-
 function handleSelect(index: string) {
     activeIndex.value = index;
 }
