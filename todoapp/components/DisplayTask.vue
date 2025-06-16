@@ -14,7 +14,7 @@
       v-if="filter === 'All'"
       >
       <ul 
-        v-for="task in tasks"
+        v-for="task in sortedTasks"
         :key="task.id"
         >
         <li class="flex justify-between items-center w-full my-2">
@@ -77,6 +77,7 @@
 import { useTaskStore } from '~/store/taskStore';
 import { Delete } from '@element-plus/icons-vue';
 const taskStore = useTaskStore();
+const {sortedTasks} = useTask()
 
 const {tasks, filterOnlyCompletedTasks, filterOnlyUncompletedTasks, countAllTasks, countCompletedTasks, countUncompletedTasks} = storeToRefs(taskStore);
 const {deleteTask} = taskStore;
@@ -84,6 +85,8 @@ const {deleteTask} = taskStore;
 const filter = ref<string>('All')
 
 console.log('From DisplayTask.vue');
+
+
 </script>
 
 <style scoped>
