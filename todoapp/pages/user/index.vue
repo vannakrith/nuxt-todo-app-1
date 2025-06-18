@@ -1,4 +1,5 @@
 <template>
+  <h2 class="mx-6 my-4">User Profiles</h2>
     <button
       @click="toggleCollapse"
       style="margin-bottom: 20px; font-size: 18px;"

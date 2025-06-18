@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-// You can add layout-specific logic here if needed
+
 </script>
 
 <style scoped>
